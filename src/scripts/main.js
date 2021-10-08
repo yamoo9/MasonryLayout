@@ -1,18 +1,16 @@
-import { masonryLayout, getStyle } from './layout.masonry.js';
+import { masonryLayout } from './layout.masonry.js';
 
-let previousColumnRatio = null;
-
-function handleMasonryLayout() {
-  let currentColumnRatio = getStyle(document.documentElement, '--column-ratio');
-
-  if (previousColumnRatio !== currentColumnRatio) {
-    masonryLayout({
-      container: '.masonry__container',
-      item: '.masonry__item',
-    });
-    previousColumnRatio = currentColumnRatio;
-  }
+function init() {
+  document.documentElement.classList.add('js');
+  handleMasonryLayout();
 }
 
-window.addEventListener('DOMContentLoaded', handleMasonryLayout);
+function handleMasonryLayout() {
+  masonryLayout({
+    container: '.masonry__container',
+    item: '.masonry__item',
+  });
+}
+
+window.addEventListener('DOMContentLoaded', init);
 window.addEventListener('resize', handleMasonryLayout);

@@ -5,7 +5,7 @@ body * {
 }
 
 body {
-  margin-top: 7rem;
+  margin: var(--gap);
   background: var(--black);
   font: 1.6rem/1.5 'Lato', sans-serif;
 }

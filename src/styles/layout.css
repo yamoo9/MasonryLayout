@@ -9,16 +9,33 @@
 
 /* Masonry ------------------------------------------------------------------ */
 
-.masonry__container {
-  display: flex;
-  flex-wrap: wrap;
+.js .masonry__container {
+  opacity: 0;
 }
 
 .masonry__item {
-  flex-direction: column;
-  position: relative;
-  width: calc(var(--column-ratio) - var(--gap));
-  margin: 0 var(--gap) var(--gap) 0;
+  margin-bottom: var(--gap);
+}
+
+@media (min-width: 640px) {
+  .masonry__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--gap);
+  }
+
+  .masonry__container {
+    grid-auto-rows: var(--gap);
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.masonry__item {
   border-radius: var(--radius);
   padding: 2rem;
   font-size: 3rem;
