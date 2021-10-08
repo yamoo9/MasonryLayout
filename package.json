@@ -1,0 +1,9 @@
+{
+  "name": "masonry-layout",
+  "scripts": {
+    "start": "lite-server -c config/bs-config.js"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

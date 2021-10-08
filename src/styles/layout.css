@@ -1,0 +1,48 @@
+/* App ---------------------------------------------------------------------- */
+
+.app__container {
+  max-width: 120rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Masonry ------------------------------------------------------------------ */
+
+.masonry__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.masonry__item {
+  flex-direction: column;
+  position: relative;
+  width: calc(var(--column-ratio) - var(--gap));
+  margin: 0 var(--gap) var(--gap) 0;
+  border-radius: var(--radius);
+  padding: 2rem;
+  font-size: 3rem;
+  font-weight: 300;
+  background: linear-gradient(var(--gradient-degree), var(--blue), var(--violet));
+  color: var(--white);
+}
+
+.masonry__item:nth-child(1) {
+  background: linear-gradient(var(--gradient-degree), var(--blue), var(--light-blue));
+}
+
+.masonry__item:nth-child(3n) {
+  background: linear-gradient(var(--gradient-degree), var(--vivid-pink), var(--light-red));
+}
+
+.masonry__item:nth-child(4n) {
+  background: linear-gradient(var(--gradient-degree), var(--violet), var(--light-blue));
+}
+
+.masonry__item:nth-child(5n) {
+  background: linear-gradient(var(--gradient-degree), var(--cool-yellow), var(--deep-red-yellow));
+}
+
+.masonry__item:nth-child(6n) {
+  background-image: linear-gradient(160deg, var(--sky-blue), var(--light-green));
+}

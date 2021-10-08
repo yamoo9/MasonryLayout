@@ -1,0 +1,11 @@
+body,
+body * {
+  box-sizing: border-box;
+  transition: all 0.45s ease-out;
+}
+
+body {
+  margin-top: 7rem;
+  background: var(--black);
+  font: 1.6rem/1.5 'Lato', sans-serif;
+}
